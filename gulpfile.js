@@ -110,7 +110,14 @@ gulp.task('dev', ['css', 'browserSync'], function() {
   gulp.watch('./*.html', browserSync.reload);
 });
 function defaultTask(cb) {
-  // place code for your default task here
+  
+// Dev task
+gulp.task('dev', ['css', 'browserSync'], function() {
+  gulp.watch('./scss/*.scss', ['css']);
+  gulp.watch('./*.html', browserSync.reload);
+});
+
+
   cb();
 }
 
